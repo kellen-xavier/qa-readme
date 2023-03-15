@@ -43,4 +43,5 @@ must be login
 
 
 
-<strong>Objetivos desta estrutura de BUG (e relatório):</strong> Essa estrutura é indicada para poder gerenciar os reports de bugs para o time de desenvolvimento (e outros), contendo informações sobre qualquer evento adverso ocorrido, para identificação de qualquer efeitos específicos, isolar o problema com um teste mínimo de reprodução e corrigir o defeito potencial conforme a necessidade ou resolver o problema. - ISTQB CTFL Syllabus
+<strong>Objetivos desta estrutura de BUG (e relatório):</strong> Essa estrutura é indicada para poder gerenciar os reports de bugs para o time de desenvolvimento (e outros), contendo informações sobre qualquer evento adverso ocorrido, para identificação de qualquer efeitos específicos, isolar o problema com um teste mínimo de reprodução e corrigir o defeito potencial conforme a necessidade ou resolver o problema. - <a href="https://bcr.bstqb.org.br/docs/syllabus_ctfl_3.1br.pdf" alt="Linkedin"> ISTQB CTFL Syllabus
+</a>

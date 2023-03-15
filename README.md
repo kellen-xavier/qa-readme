@@ -12,5 +12,7 @@
 ---
 
 <strong>Estrutura do Repositório 💼</strong>
-<p>Como padronizar Bugs</p>
-<p>Como organizar Casos de Testes utilizando escrita de testes BDD</p>
+
+[Como padronizar Bugs](https://github.com/kellen-xavier/qa-readme/tree/main/bugs)
+
+[Como organizar Casos de Testes utilizando escrita de testes BDD](https://github.com/kellen-xavier/qa-readme/tree/main/test-case)

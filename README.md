@@ -7,7 +7,7 @@
 ---
 
 ## 📚 Repositório QA
-> Esse repositório serve para compartilhar alguns padrões de escrita de Casos de Testes, BUGs, e estruturar uma Suíte de Testes, também compartilhar um pouco de conhecimento no que apliquei em alguns projetos, e para ajudar QAs a compartilhar exemplo de portfóios no seu github.
+> Esse repositório serve para compartilhar alguns padrões de escrita de Casos de Testes,  cadastro de BUGs e estruturar uma Suíte de Testes, também compartilhar um pouco de conhecimento no que apliquei em alguns projetos, e para ajudar QAs a compartilhar exemplo de portfóios no seu github.
 
 ---
 

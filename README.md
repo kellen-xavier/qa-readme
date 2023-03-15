@@ -16,3 +16,5 @@
 [Como padronizar Bugs](https://github.com/kellen-xavier/qa-readme/tree/main/bugs)
 
 [Como organizar Casos de Testes utilizando escrita de testes BDD](https://github.com/kellen-xavier/qa-readme/tree/main/test-case)
+
+[Exemplos de consultar SQL - BD Relacional](https://github.com/kellen-xavier/qa-readme/tree/main/consultar_sql)

@@ -14,7 +14,8 @@ Antes de realizarmos os testes, precisamos selecionar uma Collection, podemos se
 > Todo teste vai depender do seu contexto, porém aqui vamos utilizar alguns testes básicos
 exemplo "O retorno do status request deve ser 200".
 
-
+<img src="postman-testes-add.png"/>
+Exemplo de estrutura de testes em API;
 
 ~~~javascript
 // Verifica se o status da response é 200

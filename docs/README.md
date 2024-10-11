@@ -1,22 +1,22 @@
 # Raiz do projeto
 
-## Para criar o README.md no Visual Studio (ou sua IDE de preferência)
+## Para criar o README.md no Visual Studio (ou sua IDE de preferÃªncia)
 
-    1. Clique com o botão direito no seu projeto no Solution Explorer.
+    1. Clique com o botÃ£o direito no seu projeto no Solution Explorer.
     2. Selecione Add > New Item....
     3. Na janela "Add New Item", procure por "Text File".
     4. Nomeie o arquivo como README.md e clique em "Add".
 
-# Meus Exercícios em C#
+# Meus ExercicÃ­os em C #
 
-Este repositório contém uma série de exercícios em C# para praticar minhas habilidades de programação.
+Este repositÃ³rio contÃ©m uma sÃ©rie de exercÃ­cios em C# para praticar minhas habilidades de programaÃ§Ã£o.
 
-## Índice
+## Indice
 
 * **Strings:**
-  * [Exercício 1](Exercicios/Strings/Exercicio1.cs) - Inverter uma string.
-  * [Exercício 2](Exercicios/Strings/Exercicio2.cs) - Contar vogais em uma string.
+  * [Exercï¿½cio 1](Exercicios/Strings/Exercicio1.cs) - Inverter uma string.
+  * [Exercï¿½cio 2](Exercicios/Strings/Exercicio2.cs) - Contar vogais em uma string.
 
-* **Números:**
-  * [Exercício 3](Copiar/Caminho/Absoluto/Exercicios/Numeros/Exercicio3.cs) - Calcular o fatorial de um número.
-  * [Exercício 4](Copiar/Caminho/Absoluto/Exercicios/Numeros/Exercicio4.cs) - Verificar se um número é primo.
+* **Nï¿½meros:**
+  * [Exercï¿½cio 3](Copiar/Caminho/Absoluto/Exercicios/Numeros/Exercicio3.cs) - Calcular o fatorial de um nï¿½mero.
+  * [Exercï¿½cio 4](Copiar/Caminho/Absoluto/Exercicios/Numeros/Exercicio4.cs) - Verificar se um nÃºmero Ã© primo.

@@ -1,47 +1,54 @@
 # Abertura de BUG - Projeto XYZ
 
-<strong>Título do BUG:</strong> BUG Plataforma | Ação X não está respondendo conforme esperado
+## Título do BUG [Funcionalidade ]
 
-<strong>Data:</strong> dd/mm/aa
+BUG Plataforma | Ação X não está respondendo conforme esperado
 
-<strong>Cenário:</strong> Plataforma_ADMIN | Edit a material video's record
+## Data
+
+dd/mm/aa
+
+## Cenário
+
+Plataforma_ADMIN | Edit a material video's record
 must be login
 
-<strong>Descrição do cenário do Teste:</strong> Deve poder editar vídeo somente para quem está  logado na Plataforma
+## Descrição do cenário do Teste
 
-<strong>Repro Steps:</strong>
+Deve poder editar vídeo somente para quem está  logado na Plataforma
 
-(Dado) Given in the portal admin panel
+## Repro Steps
 
-(E) And edit a vídeo
+> Como foi exatamente os passos realizados (ação) que resultou o comportamento atual
 
-(E) And must be active
+1. (Dado) Given in the portal admin panel
+2. (E) And edit a vídeo
+3. (E) And must be active
+4. (Quando) When the option 'Only visible to companies' disabled
+5. (Então) Then must have the videos in Materials, visible to everyone on the portal
 
-(Quando) When the option 'Only visible to companies' disabled
+---
 
-(Então) Then must have the videos in Materials, visible to everyone on the portal
+## BUG: When saving the option only for companies is saving enabled by default - Descrição objetiva do BUG
 
+## Critério de Aceite: Qual critério não foi atendido
 
+**Evidências:** Prints com destaque onde está ocorrendo o erro/ Vídeo do Fluxo/ Log de eventos de Erros ocorrendo/ Trecho do código
 
-<strong>BUG:</strong> When saving the option only for companies is saving enabled by default - Descrição objetiva do BUG
+**Grau de impacto no Sistema/Severidade:** Crítica/Alta/Média/baixa
 
-<strong>Critério de Aceite:</strong> Qual critério não foi atendido
+**Prioridade:** Alta/Média/Baixa
 
-<strong>Evidências:</strong> Prints com destaque onde está ocorrendo o erro/ Vídeo do Fluxo/ Log de eventos de Erros ocorrendo/ Trecho do código
+**Informações do Sistema:** Tem alguma informação a mais sobre como ocorreu esse erro ? Adicionar as informações aqui. Exemplo “somente ocorre no Navegador X”.
 
-<strong>Grau de impacto no Sistema/Severidade:</strong> Crítica/Alta/Média/baixa
+**Histórico de Alterações:** pode ser commits das correções ou histórico do mesmo (repositório do projeto).
 
-<strong>Prioridade:</strong> Alta/Média/Baixa
+**Referências:** incluír os Casos de Testes
 
-<strong>Informações do Sistema:</strong> Tem alguma informação a mais sobre como ocorreu esse erro ? Adicionar as informações aqui. Exemplo “somente ocorre no Navegador X”.
+**Status:** Aberto/Diferido/Duplicado/Aguardando correção/Aguardando confirmação/Reaberto/ Fechado
 
-<strong>Histórico de Alterações:</strong> pode ser commits das correções ou histórico do mesmo (repositório do projeto).
+---
 
-<strong>Referências:</strong> incluír os Casos de Testes
+> Objetivos desta estrutura de BUG (e relatório): Essa estrutura é indicada para poder gerenciar os reports de bugs para o time de desenvolvimento (e outros), contendo informações sobre qualquer evento adverso ocorrido, para identificação de qualquer efeitos específicos, isolar o problema com um teste mínimo de reprodução e corrigir o defeito potencial conforme a necessidade ou resolver o problema.
 
-<strong>Status:</strong> Aberto/Diferido/Duplicado/Aguardando correção/Aguardando confirmação/Reaberto/ Fechado
-
-
-
-<strong>Objetivos desta estrutura de BUG (e relatório):</strong> Essa estrutura é indicada para poder gerenciar os reports de bugs para o time de desenvolvimento (e outros), contendo informações sobre qualquer evento adverso ocorrido, para identificação de qualquer efeitos específicos, isolar o problema com um teste mínimo de reprodução e corrigir o defeito potencial conforme a necessidade ou resolver o problema. - <a href="https://bcr.bstqb.org.br/docs/syllabus_ctfl_3.1br.pdf" alt="Linkedin"> ISTQB CTFL Syllabus
-</a>
+[Referencias - ISTQB CTFL Syllabus](https://bcr.bstqb.org.br/docs/syllabus_ctfl_3.1br.pdf)

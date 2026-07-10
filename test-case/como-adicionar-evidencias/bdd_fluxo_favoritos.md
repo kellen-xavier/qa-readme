@@ -1,49 +1,40 @@
-<strong>Portfólio Escrita de Testes BDD - Projeto Magalu</strong>
+# Portfólio Escrita de Testes BDD - Projeto Magalu
 
-<strong>Descrição:</strong> Usuário deve adicionar itens aos Favoritos, e consultar Listagem;
+**Descrição:** Usuário deve adicionar itens aos Favoritos, e consultar Listagem;
 
-<strong>Pré-condições:</strong> Usuário deve estar logado no ecommerce
+**Pré-condições:** Usuário deve estar logado no ecommerce
 
-<strong>Feature:</strong> Lista de Favoritos
+**Feature:** Lista de Favoritos
 
-<strong>Resultado esperado:</strong> Adicionar itens aos favoritos.
+**Resultado esperado:** Adicionar itens aos favoritos.
 
-<strong>Observações Gerais:</strong> Melhoria na listagem - adicionar filtro de adicionados recentes e mais antigos;
+**Observações Gerais:** Melhoria na listagem - adicionar filtro de adicionados recentes e mais antigos;
+
+---
+
+**Teste 1:** Validar adicionar itens a lista de Favoritos com sucesso
+
+**Steps:**
+
+1. Dado que usuário esteja @logado no Ecommerce Magalu
+2. E navegue por produtos
+3. E usuário clique em um produto
+4. E usuário redireciona para página do produto
+5. Quando usuário clicar no ícone de coração `>Favoritos`
+6. Então deve adicionar na lista de Favoritos
 
 ---
 
-<strong>Teste 1:</strong> Validar adicionar itens a lista de Favoritos com sucesso
+**Teste 2:** Validar Listagem de Produtos adicionados aos Favoritos com sucesso
 
-<strong>Steps:</strong>
+**Steps:**
 
-1- Dado que usuário esteja @logado no Ecommerce Magalu
+1. Dado que usuário clicou no `>Menu`
+2. E usuário clicou em `>Favoritos`
+3. Quando redirecionar para página de Favoritos
+4. Então deve listar todos os produtos adicionados nos Favoritos
 
-2- E navegue por produtos
-
-3- E usuário clique em um produto
-
-4- E usuário redireciona para página do produto
-
-5- Quando usuário clicar no ícone de coração >Favoritos
-
-6- Então deve adicionar na lista de Favoritos
-
----
-<strong>Teste 2:</strong> Validar Listagem de Produtos adicionados aos Favoritos com sucesso
-
-<strong>Steps:</strong>
-
-1- Dado que usuário clicou no >Menu
-
-2- E usuário clicou em >Favoritos
-
-3- Quando redirecionar para página de Favoritos
-
-4- Então deve listar todos os produtos adicionados nos Favoritos
-
-
-
-<strong>Evidências em anexo</strong>
+**Evidências em anexo**
 
 ---
 

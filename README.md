@@ -12,9 +12,11 @@
 
 ## Estrutura do Repositório 💼
 
-- [Como padronizar Bugs](https://github.com/kellen-xavier/qa-readme/tree/main/bugs)
-- [Como organizar Casos de Testes utilizando escrita de testes BDD](https://github.com/kellen-xavier/qa-readme/tree/main/test-case)
-- [Exemplos de consultar SQL - BD Relacional](https://github.com/kellen-xavier/qa-readme/tree/main/consultar_sql)
+- [Exemplo de Padrão de Documento de Testes](/docs/documento-evidencias-de-testes.md)
+- [Como padronizar Bugs](/bugs/)
+- [Como organizar Casos de Testes utilizando escrita de testes BDD](/test-case/)
+
+- [Exemplos de consultar SQL - BD Relacional](/consultar_sql/)
 
 ### Estudos em Testes Automatizados
 

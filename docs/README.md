@@ -7,7 +7,7 @@
 3. Na janela `Add New Item`, procure por `Text File`.
 4. Nomeie o arquivo como `README.md` e clique em `Add`.
 
-## Meus Exercícios em C#
+## Meus Exercícios em `C#`
 
 Este repositório contém uma série de exercícios em C# para praticar minhas habilidades de programação.
 

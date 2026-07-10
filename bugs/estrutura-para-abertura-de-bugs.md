@@ -1,37 +1,36 @@
 # Abertura de BUG - Projeto XYZ
 
-## Título do BUG [Funcionalidade ]
+## Título do BUG [Funcionalidade XX]
 
 BUG Plataforma | Ação X não está respondendo conforme esperado
 
-## Data
+**Data:** dd/mm/aa
 
-dd/mm/aa
+>Adicione no documento de evidências de testes, quando foi cadastrato a inconformidade. Dado importante para rastreabilidade
 
-## Cenário
+**Cenário:** Plataforma_ADMIN | Edit a material video's record must be login
 
-Plataforma_ADMIN | Edit a material video's record
-must be login
+**Descrição do cenário do Teste:** Deve poder editar vídeo somente para quem está  logado na Plataforma
 
-## Descrição do cenário do Teste
-
-Deve poder editar vídeo somente para quem está  logado na Plataforma
-
-## Repro Steps
+**Repro Steps:**
 
 > Como foi exatamente os passos realizados (ação) que resultou o comportamento atual
 
-1. (Dado) Given in the portal admin panel
-2. (E) And edit a vídeo
-3. (E) And must be active
-4. (Quando) When the option 'Only visible to companies' disabled
-5. (Então) Then must have the videos in Materials, visible to everyone on the portal
+(Dado) Given in the portal admin panel
+
+(E) And edit a vídeo
+
+(E) And must be active
+
+(Quando) When the option 'Only visible to companies' disabled
+
+(Então) Then must have the videos in Materials, visible to everyone on the portal
 
 ---
 
-## BUG: When saving the option only for companies is saving enabled by default - Descrição objetiva do BUG
+**BUG:** When saving the option only for companies is saving enabled by default - Descrição objetiva do BUG
 
-## Critério de Aceite: Qual critério não foi atendido
+**Critério de Aceite:** Qual critério não foi atendido
 
 **Evidências:** Prints com destaque onde está ocorrendo o erro/ Vídeo do Fluxo/ Log de eventos de Erros ocorrendo/ Trecho do código
 

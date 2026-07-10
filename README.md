@@ -1,4 +1,4 @@
-<h1 align="center">📄<br>Quality Assurance</h1>
+# Quality Assurance
 
 ![Quality Assurance](img/software_3.jpg)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## **Estrutura do Repositório** 💼
+## Estrutura do Repositório 💼
 
 - [Como padronizar Bugs](https://github.com/kellen-xavier/qa-readme/tree/main/bugs)
 - [Como organizar Casos de Testes utilizando escrita de testes BDD](https://github.com/kellen-xavier/qa-readme/tree/main/test-case)

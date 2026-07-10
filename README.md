@@ -1,5 +1,8 @@
 # Quality Assurance
 
+Repositório serve para consultas centralizadas sobre Qualidade de Software.
+Padrões de Documentos, links com referẽncias técnicas, artigos, entre outros, utilize como consulta, para estudos, aplicar no projeto que está atuando.
+
 ![Quality Assurance](img/software_3.jpg)
 
 ---
@@ -21,3 +24,8 @@
 ### Estudos em Testes Automatizados
 
 - [Testes automatizados com K6 em APIs](https://github.com/kellen-xavier/estudos_k6)
+
+## Referencias
+
+[QA in Production](https://martinfowler.com/articles/qa-in-production.html)
+[Dev Ops Culture](https://martinfowler.com/bliki/DevOpsCulture.html)

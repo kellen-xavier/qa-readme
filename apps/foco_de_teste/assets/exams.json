@@ -1,0 +1,120 @@
+[
+  {
+    "id": "A",
+    "title": "Treino A",
+    "description": "Revisões, limites, confirmação e risco.",
+    "questions": [
+      {
+        "id": "a1",
+        "prompt": "Uma equipe revisa requisitos antes de iniciar a implementação. Que benefício espera obter?",
+        "options": [
+          "Encontrar ambiguidades cedo",
+          "Eliminar a necessidade de executar testes",
+          "Comprovar que o sistema está livre de falhas",
+          "Substituir a validação com usuários"
+        ],
+        "correctIndex": 0,
+        "explanation": "Uma revisão pode revelar ambiguidades antes que elas virem defeitos no código.",
+        "topic": "Testes estáticos"
+      },
+      {
+        "id": "a2",
+        "prompt": "Um campo aceita valores inteiros de 1 a 10. Quais entradas cobrem as duas fronteiras com análise de valor limite de dois valores?",
+        "options": [
+          "1, 5, 10, 11",
+          "0, 1, 10, 11",
+          "0, 2, 9, 11",
+          "1, 2, 9, 10"
+        ],
+        "correctIndex": 1,
+        "explanation": "Para cada fronteira, use os valores imediatamente dentro e fora da faixa: 0/1 e 10/11.",
+        "topic": "Análise de valor limite"
+      },
+      {
+        "id": "a3",
+        "prompt": "Após uma correção, a equipe repete o teste que revelava a falha. Que tipo de teste está fazendo?",
+        "options": [
+          "Teste de aceitação",
+          "Teste de confirmação",
+          "Teste exploratório",
+          "Teste de carga"
+        ],
+        "correctIndex": 1,
+        "explanation": "O teste de confirmação verifica se o defeito original foi corrigido.",
+        "topic": "Testes ao longo do ciclo de vida"
+      },
+      {
+        "id": "a4",
+        "prompt": "Uma equipe tem pouco tempo e precisa priorizar cenários pelo risco de produto. Quais fatores deve considerar?",
+        "options": [
+          "Idade do código e tamanho da equipe",
+          "Quantidade de testes e número de desenvolvedores",
+          "Probabilidade de ocorrência e impacto",
+          "Tempo de execução e custo da ferramenta"
+        ],
+        "correctIndex": 2,
+        "explanation": "O nível de risco considera a probabilidade e o impacto de sua ocorrência.",
+        "topic": "Gerenciamento de testes"
+      }
+    ]
+  },
+  {
+    "id": "B",
+    "title": "Treino B",
+    "description": "Falhas, automação, decisões e relato de defeitos.",
+    "questions": [
+      {
+        "id": "b1",
+        "prompt": "Um erro na regra de desconto produz um total incorreto em execução. Como se chama o comportamento observado?",
+        "options": [
+          "Causa raiz",
+          "Falha",
+          "Defeito no requisito",
+          "Caso de teste"
+        ],
+        "correctIndex": 1,
+        "explanation": "Falha é o comportamento incorreto observado em execução. O defeito pode estar na implementação da regra.",
+        "topic": "Fundamentos de teste"
+      },
+      {
+        "id": "b2",
+        "prompt": "Que benefício uma ferramenta de automação pode trazer a uma suíte de regressão estável?",
+        "options": [
+          "Dispensar a manutenção da suíte",
+          "Garantir cobertura de todos os riscos",
+          "Eliminar falsos positivos",
+          "Repetir verificações de maneira consistente"
+        ],
+        "correctIndex": 3,
+        "explanation": "A automação facilita a repetição consistente de verificações, com manutenção e análise dos resultados.",
+        "topic": "Ferramentas de teste"
+      },
+      {
+        "id": "b3",
+        "prompt": "Um usuário só recebe desconto se for assinante e a compra atingir R$ 100. Que técnica ajuda a organizar as combinações dessas condições?",
+        "options": [
+          "Tabela de decisão",
+          "Análise de valor limite",
+          "Transição de estados",
+          "Teste de instruções"
+        ],
+        "correctIndex": 0,
+        "explanation": "Uma tabela de decisão explicita as combinações das condições e a ação esperada em cada regra.",
+        "topic": "Análise e projeto de testes"
+      },
+      {
+        "id": "b4",
+        "prompt": "Qual informação ajuda outra pessoa a reproduzir uma falha registrada?",
+        "options": [
+          "Apenas o nome de quem testou",
+          "Apenas a prioridade atribuída",
+          "Passos, dados e ambiente utilizados",
+          "Apenas o horário do relato"
+        ],
+        "correctIndex": 2,
+        "explanation": "Passos, dados e ambiente permitem reconstruir as condições em que a falha aconteceu.",
+        "topic": "Gerenciamento de testes"
+      }
+    ]
+  }
+]

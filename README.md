@@ -29,3 +29,7 @@ Padrões de Documentos, links com referẽncias técnicas, artigos, entre outros
 
 [QA in Production](https://martinfowler.com/articles/qa-in-production.html)
 [Dev Ops Culture](https://martinfowler.com/bliki/DevOpsCulture.html)
+
+## Foco de Teste
+
+[Aplicativo Flutter para estudos CTFL — web, Android e iOS](apps/foco_de_teste/README.md).

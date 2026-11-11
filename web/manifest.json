@@ -3,8 +3,8 @@
     "short_name": "Foco de Teste",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
+    "background_color": "#f5f1eb",
+    "theme_color": "#7549c9",
     "description": "Estudos CTFL Foundation 4.0",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
@@ -31,5 +31,8 @@
             "type": "image/png",
             "purpose": "maskable"
         }
-    ]
+    ],
+    "id": ".",
+    "scope": ".",
+    "lang": "pt-BR"
 }

@@ -6,6 +6,7 @@ import 'data/study_store.dart';
 import 'domain/exam_session.dart';
 import 'domain/question.dart';
 import 'domain/study_profile.dart';
+import 'domain/study_result.dart';
 
 class AppController extends ChangeNotifier {
   AppController({
@@ -22,6 +23,9 @@ class AppController extends ChangeNotifier {
   StudyProfile profile = const StudyProfile();
   ExamSession? session;
   String? storageWarning;
+  final List<StudyResult> _history = [];
+  List<StudyResult> get history => List.unmodifiable(_history);
+  bool _sessionRecorded = false;
   Future<void> _pendingSave = Future.value();
   Timer? _timer;
   bool _disposed = false;
@@ -38,16 +42,31 @@ class AppController extends ChangeNotifier {
     try {
       final snapshot = store!.read();
       if (snapshot == null) return;
-      if (snapshot['version'] != 1) {
+      if (snapshot['version'] != 1 && snapshot['version'] != 2) {
         throw const FormatException('Versão incompatível.');
       }
       profile = StudyProfile.fromJson(
         snapshot['profile'] as Map<String, dynamic>,
       );
+      _history.clear();
+      for (final entry in (snapshot['history'] as List? ?? [])) {
+        _history.add(StudyResult.fromJson(entry as Map<String, dynamic>));
+      }
+      _sessionRecorded = snapshot['sessionRecorded'] == true;
       final attempt = snapshot['session'];
       if (attempt != null) {
-        session = ExamSession.fromJson(attempt as Map<String, dynamic>, exams);
-        session!.expireIfNeeded(_now());
+        try {
+          session = ExamSession.fromJson(
+            attempt as Map<String, dynamic>,
+            exams,
+          );
+          session!.expireIfNeeded(_now());
+        } on Object {
+          session = null;
+          storageWarning =
+              'A tentativa anterior não está disponível. Seu histórico foi preservado.';
+        }
+        if (session?.completed ?? false) persist();
       }
     } on Object {
       session = null;
@@ -69,6 +88,7 @@ class AppController extends ChangeNotifier {
 
   void startExam(PracticeExam exam, FocusMode mode) {
     if (hasActiveSession) throw StateError('Retome a tentativa em andamento.');
+    _sessionRecorded = false;
     session = ExamSession.start(exam, mode, _now());
     _changed();
   }
@@ -116,9 +136,15 @@ class AppController extends ChangeNotifier {
 
   /// Serialize writes so an older snapshot cannot overwrite a newer answer.
   Future<void> persist() {
+    if ((session?.completed ?? false) && !_sessionRecorded) {
+      _history.add(StudyResult.fromSession(session!, _now()));
+      _sessionRecorded = true;
+    }
     if (store == null) return Future.value();
     final snapshot = {
-      'version': 1,
+      'version': 2,
+      'history': _history.map((result) => result.toJson()).toList(),
+      'sessionRecorded': _sessionRecorded,
       'profile': profile.toJson(),
       'session': session?.toJson(),
     };

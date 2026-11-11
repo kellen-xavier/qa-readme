@@ -1,17 +1,14 @@
 name: Foco de Teste
 on:
   push:
-    paths: ['apps/foco_de_teste/**', '.github/workflows/foco-de-teste.yml']
+    paths: ['tool/**', 'lib/**', 'test/**', 'assets/**', 'web/**', 'android/**', 'ios/**', 'pubspec.yaml', 'pubspec.lock', 'analysis_options.yaml', '.metadata', '.github/workflows/foco-de-teste.yml']
   pull_request:
-    paths: ['apps/foco_de_teste/**', '.github/workflows/foco-de-teste.yml']
+    paths: ['tool/**', 'lib/**', 'test/**', 'assets/**', 'web/**', 'android/**', 'ios/**', 'pubspec.yaml', 'pubspec.lock', 'analysis_options.yaml', '.metadata', '.github/workflows/foco-de-teste.yml']
 permissions:
   contents: read
 jobs:
   flutter:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/foco_de_teste
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -23,4 +20,4 @@ jobs:
       - run: dart format --output=none --set-exit-if-changed lib test
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build web
+      - run: python3 tool/build_web.py

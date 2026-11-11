@@ -17,13 +17,14 @@
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#7549c9">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Estude para a CTFL e acompanhe seu progresso neste dispositivo, sem criar conta.">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="foco_de_teste">
+  <meta name="apple-mobile-web-app-title" content="Foco de Teste">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
@@ -32,7 +33,11 @@
   <title>Foco de Teste</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body style="margin:0">
+  <div id="offline-status" role="status" aria-live="polite"
+       style="position:fixed;bottom:0;left:0;right:0;z-index:1000;padding:5px 12px;background:#262139;color:white;font:12px sans-serif;text-align:center;pointer-events:none">
+    Preparando o app para estudar offline…
+  </div>
   <!--
     You can customize the "flutter_bootstrap.js" script.
     This is useful to provide a custom configuration to the Flutter loader

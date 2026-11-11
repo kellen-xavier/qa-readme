@@ -1,0 +1,5 @@
+[tools]
+flutter = "3.47.9-stable"
+
+[env]
+CHROME_EXECUTABLE = "/usr/bin/google-chrome-stable"

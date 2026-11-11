@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -86,6 +87,7 @@ class PageFrame extends StatelessWidget {
       ],
     ),
     body: SafeArea(
+      minimum: EdgeInsets.only(bottom: kIsWeb ? 48 : 0),
       child: Align(
         alignment: Alignment.topCenter,
         child: ConstrainedBox(

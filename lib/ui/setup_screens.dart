@@ -76,6 +76,16 @@ class HomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute<void>(
                             builder: (_) =>
+                                ProgressScreen(controller: controller),
+                          ),
+                        ),
+                        child: const Text('Meu progresso'),
+                      ),
+                      OutlinedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (_) =>
                                 ProfileScreen(controller: controller),
                           ),
                         ),
@@ -108,6 +118,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          const SizedBox(height: 16),
+          const Text(
+            'Sem conta: seu perfil, suas respostas e seu histórico ficam neste dispositivo. '
+            'Limpar os dados do app ou do site apaga o progresso. '
+            'No modo privado, os dados podem ser apagados ao fechar o navegador.',
           ),
           if (controller.session?.completed ?? false) ...[
             const SizedBox(height: 16),
@@ -391,5 +407,102 @@ class ReadyScreen extends StatelessWidget {
         ),
       ],
     ),
+  );
+}
+
+class ProgressScreen extends StatelessWidget {
+  const ProgressScreen({super.key, required this.controller});
+  final AppController controller;
+
+  @override
+  Widget build(BuildContext context) => ListenableBuilder(
+    listenable: controller,
+    builder: (context, _) {
+      final history = controller.history;
+      final correct = history.fold(0, (sum, result) => sum + result.score);
+      final total = history.fold(0, (sum, result) => sum + result.total);
+      return PageFrame(
+        child: PageBody(
+          children: [
+            const PageHeading(
+              'Meu progresso',
+              subtitle:
+                  'Seu estudo fica salvo neste dispositivo, sem criar conta.',
+            ),
+            if (controller.storageWarning != null)
+              Text(controller.storageWarning!),
+            Panel(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    history.length == 1
+                        ? '1 treino concluído'
+                        : '${history.length} treinos concluídos',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    total == 0
+                        ? 'Conclua um simulado para acompanhar seus resultados aqui.'
+                        : '$correct de $total questões corretas · '
+                              '${(correct * 100 / total).round()}% de aproveitamento',
+                  ),
+                  if (controller.hasActiveSession) ...[
+                    const SizedBox(height: 12),
+                    Text(
+                      'Em andamento: ${controller.session!.exam.title} · '
+                      '${controller.session!.answeredCount} de '
+                      '${controller.session!.exam.questions.length} questões respondidas',
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (_) => QuizScreen(controller: controller),
+                        ),
+                      ),
+                      child: const Text('Retomar simulado'),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            for (final result in history.reversed) ...[
+              const SizedBox(height: 16),
+              Panel(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      result.examTitle,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    Text(
+                      '${MaterialLocalizations.of(context).formatShortDate(result.finishedAt.toLocal())} · '
+                      '${result.mode.label}',
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      '${result.score} de ${result.total} acertos · '
+                      '${(result.score * 100 / result.total).round()}%',
+                    ),
+                    Text(
+                      '${result.answered} ${result.answered == 1 ? 'questão respondida' : 'questões respondidas'} · '
+                      '${formatTime(Duration(seconds: result.usedSeconds))} de estudo',
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            const SizedBox(height: 20),
+            const Text(
+              'Os dados não são enviados para uma conta e não são sincronizados entre dispositivos. '
+              'Use o mesmo navegador e endereço do app para continuar seu estudo.',
+            ),
+          ],
+        ),
+      );
+    },
   );
 }

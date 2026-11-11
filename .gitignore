@@ -1,0 +1,80 @@
+# Flutter / Dart: caches, dependências e arquivos gerados
+.dart_tool/
+.pub/
+.pub-cache/
+.packages
+.flutter-plugins*
+build/
+/coverage/
+*.lcov
+*.symbols
+*.dill
+*.part.js
+
+# Android: SDK local, caches e assinaturas
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/**/.cxx/
+android/**/.externalNativeBuild/
+android/key.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# iOS / Xcode: dependências e configuração gerada localmente
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/ephemeral/
+**/flutter/ephemeral/
+**/DerivedData/
+**/xcuserdata/
+*.ipa
+*.dSYM/
+*.xcresult/
+*.mobileprovision
+*.p12
+*.p8
+
+# Ferramentas e ambientes locais (mise.toml e pubspec.lock são versionados)
+.mise.local.toml
+mise.local.toml
+.tool-versions.local
+.fvm/
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Credenciais locais; exemplos sem valores reais podem ser versionados
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# IDEs, arquivos temporários e sistema operacional
+.idea/
+.vscode/
+*.iml
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+~$*
+
+# Artefatos de validação local e sessões de navegador
+/.agent-browser/
+/test-results/
+/playwright-report/

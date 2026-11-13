@@ -42,6 +42,19 @@ python3 tool/build_web.py
 flutter build apk --debug
 ```
 
+## Lista de Outros Locais para Estudar
+
+Essa lista é achados que achei interessante recomendar - nenhuma delas é oficial da [ISTQB](https://bstqb.online/index.php/sobre)
+
+[Site Cobertura Completa de Todos os Exames de Certificação ISTQB®](https://mockexamnetwork.com/pt/)
+
+[Site com Simulados e Metodologia para Estudo na Certificação selecionada em QA](https://ctfl-app.vercel.app/ctfl/hoje?tab=hoje&prova=ctfl)
+[Repo ctfl-app](https://github.com/ironidesflj/ctfl-app)
+
+[App Não-oficial Simulados Prova Foundation e mais](https://play.google.com/store/apps/details?id=com.estudo.istqbquiz&hl=pt_BR)
+
+---
+
 ## Organização
 
 - `lib/domain` contém questões, perfil e estado da tentativa em Dart. O cronômetro recebe o horário nas operações para permitir testes determinísticos.
